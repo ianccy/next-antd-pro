@@ -2,8 +2,12 @@ import { Button, ConfigProvider } from "antd";
 import enUS from "antd/locale/en_US";
 import Table from "@/components/table";
 import dynamic from "next/dynamic";
+import { useEffect } from "react";
 
 function Home() {
+  useEffect(() => {
+    fetch(`/todos/1`);
+  }, []);
   return (
     <main className="flex flex-col items-center justify-between p-24 gap-2">
       <Button type="primary">Button</Button>
